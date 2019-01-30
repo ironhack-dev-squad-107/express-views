@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Ironhack Playlist</title>
+
+  <link rel="stylesheet" href="/css/style.css" />
+</head>
+
+<body>
+  <h1>Ironhack Playlist</h1>
+
+  <p>Here's a sample of our cool playlist:</p>
+
+  <h2>{{featuredSong.title}}</h2>
+  <p>by {{featuredSong.artist}}</p>
+
+  <!-- you can only check truthy/falsy directly in HBS if statements
+       (===, <, >, etc. are NOT allowed) -->
+  {{#if featuredSong.comment}}
+  <h3>Curator's Comment</h3>
+  <p>{{featuredSong.comment}}</p>
+  {{else}}
+  <p>No comment yet.</p>
+  {{/if}}
+
+  <img src="{{featuredSong.photoUrl}}" />
+
+  <a href="/playlist">See the Full Playlist</a>
+</body>
+
+</html>

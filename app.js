@@ -3,6 +3,7 @@
 // #############################################################################
 
 const express = require("express");
+const hbs = require("hbs");
 
 const app = express();
 
@@ -20,6 +21,10 @@ app.set("view engine", "hbs");
 
 // Uncomment the next line if you want to change the name of the "views/" folder
 // app.set("views", __dirname + "/some-other-folder");
+
+// Connect the "views/partials/" folder to HBS for including partial files
+// (use "registerPartials()" with an S at the end)
+hbs.registerPartials(__dirname + "/views/partials");
 
 // Routes
 // -----------------------------------------------------------------------------
